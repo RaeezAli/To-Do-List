@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section class="to-do-List-Section" id="to-do-List-Section">
+
+        <div class="to-do-List" id="to-do-List">
+
+        <h1 class="heading">To Do List <img src="https://media.istockphoto.com/id/1303877287/vector/paper-checklist-and-pencil-flat-pictogram.jpg?s=612x612&w=0&k=20&c=NoqPzn94VH2Pm7epxF8P5rCcScMEAiGQ8Hv_b2ZwRjY=" alt=""></h1>
+
+            <div class="entrySection" id="entrySection">
+            
+                <input type="text" name="entryBar" id="entryBar" placeholder="Title">
+                <button type="button" class="addButton" id="addButton" onclick="addList()">Add</button>
+            
+            </div>
+
+            <ul class="listSection" id="listSection">
+                <!-- <li class="" id=""></li> -->
+            </ul> 
+
+            <div class="changeSection">
+
+                <button type="button" class="editButton" id="editButton" onclick="editList()">Edit</button>
+                <button type="button" class="clearAllButton" onclick="clearAllList()">Clear All</button>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

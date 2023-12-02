@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.to-do-List-Section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg , #153677 , #4e085f);
+    padding: 10px;
+} 
+
+.to-do-List-Section .heading {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.to-do-List-Section .heading img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.to-do-List {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.entrySection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+#entryBar {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.addButton , .editButton , .clearAllButton {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #ff5945;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.listSection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.listSection li {
+    list-style: none;
+    font-size: 15px;
+    padding: 16px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.listSection li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(data:image/png;base64,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);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.listSection li.checked {
+    color: #555555;
+    text-decoration: line-through;
+}
+
+.listSection li.checked::before {
+    background-image: url(https://a0.anyrgb.com/pngimg/690/640/fixed-tick-icon-green-tick-match-tick-dialog-box-checkbox-check-mark-button-grass.png);
+}
+
+.listSection li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* .listSection li span:hover {
+    background: #edeef0;
+} */
+
+.changeSection {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input {
+    display: block;
+    font-size: 15px;
+    padding: 16px 8px 12px 50px;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+#ebtn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    right: 60px;
+    bottom: 5px;
+    transition: 1s ease;
+}
+
+#ebtn:hover {
+    background: #949699;
+}
+
+
+
